@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Lorena Calvo Acosta - Analista Programador / Funcional</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 210mm;
+            min-height: 297mm;
+            background-color: #ffffff;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #ffffff;
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24pt;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-size: 14pt;
+            color: #3498db;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+
+        .contact-info {
+            margin-top: 15px;
+            font-size: 10pt;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+
+        .main-content {
+            padding: 30px 40px;
+        }
+
+        section {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 15pt;
+            border-left: 5px solid #3498db;
+            padding-left: 10px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            background-color: #f9f9f9;
+        }
+
+        .experience-item {
+            margin-bottom: 20px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-weight: bold;
+            color: #2980b9;
+        }
+
+        .company {
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 3px;
+            font-size: 10.5pt;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .skill-category {
+            font-size: 10pt;
+        }
+
+        .skill-category strong {
+            display: block;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .badge {
+            background-color: #e8f4fd;
+            color: #2980b9;
+            padding: 2px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 2px;
+            font-size: 9pt;
+            border: 1px solid #d1e9f9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.8em;
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        /* Selector de Idioma Flotante */
+        .language-switcher {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background-color: #ffffff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid #eef2f5;
+        }
+
+        .lang-link {
+            text-decoration: none;
+            font-size: 9.5pt;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            color: #7f8c8d;
+            letter-spacing: 0.5px;
+            transition: color 0.2s ease;
+        }
+
+        .lang-link:hover {
+            color: #2c3e50;
+        }
+
+        .lang-link.active {
+            color: #3498db;
+            pointer-events: none;
+            /* Esto evita clics repetidos en el idioma ya activo */
+        }
+
+        .lang-divider {
+            color: #ddd;
+            font-size: 9pt;
+        }
+
+        button.no-print {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        button.no-print:hover {
+            background-color: #2980b9;
+        }
+
+        /* Diseño Adaptativo (Responsive para pantallas medianas/pequeñas) */
+        @media (max-width: 1200px) {
+            .language-switcher {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                box-shadow: none;
+                background-color: rgba(255, 255, 255, 0.15);
+                border: none;
+            }
+
+            .lang-link {
+                color: #ecf0f1;
+            }
+
+            .lang-link:hover {
+                color: #ffffff;
+            }
+
+            .lang-link.active {
+                color: #3498db;
+            }
+
+            .lang-divider {
+                color: #7f8c8d;
+            }
+        }
+
+        /* Estilos específicos de impresión (Al exportar a PDF) */
+        @media print {
+            body {
+                background-color: white;
+            }
+
+            .container {
+                box-shadow: none;
+                margin: 0;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Selector de idioma flotante -->
+    <!-- Selector de idioma flotante -->
+    <div class="language-switcher no-print">
+        <a id="btn-es" href="#es" class="lang-link active"
+            onclick="document.getElementById('cv-en').style.display='none'; document.getElementById('cv-es').style.display='block'; 
+		     document.getElementById('btn-en').classList.remove('active'); this.classList.add('active'); return false;">ES</a>
+        <span class="lang-divider">|</span>
+        <a id="btn-en" href="#en" class="lang-link"
+            onclick="document.getElementById('cv-es').style.display='none'; document.getElementById('cv-en').style.display='block'; 
+		     document.getElementById('btn-es').classList.remove('active'); this.classList.add('active'); return false;">EN</a>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- VISTA EN ESPAÑOL                           -->
+    <!-- ========================================== -->
+    <div id="cv-es">
+        <div class="container">
+            <header>
+                <h1>Lorena Calvo Acosta</h1>
+                <div class="subtitle">Analista Programador / Funcional | Experta BankSphere & Integración Bancaria</div>
+                <div class="contact-info">
+                    <span>📍 Cáceres, España</span>
+                    <span>📞 (+34) 636 791 836</span>
+                    <span>✉️ <a href="mailto:lcalvoac@gmail.com">lcalvoac@gmail.com</a></span>
+                    <span>🔗 <a href="https://www.linkedin.com/in/lorena-calvo-acosta/"
+                            target="_blank">LinkedIn</a></span>
+                </div>
+            </header>
+
+            <div class="main-content">
+                <section id="perfil">
+                    <h2>Perfil Profesional</h2>
+                    <p style="font-size: 10.5pt; text-align: justify; margin: 0;">
+                        Ingeniera Técnica en Informática de Gestión con más de 15 años de trayectoria en el sector
+                        bancario financiero, trabajando en equipos internacionales de alto rendimiento desde 2015.
+                        Perfil polivalente que domina el ciclo de vida completo del software: desde el análisis y el
+                        modelado inicial hasta el desarrollo frontend/backend y el despliegue final en producción.
+                        Especializada en la arquitectura corporativa de Banco Santander (BankSphere y Partenón), con una
+                        sólida experiencia en backend Java y bases de datos relacionales con habilidades adaptativas en
+                        tecnologías modernas de frontend.
+                    </p>
+                </section>
+
+                <section id="experiencia">
+                    <h2>Experiencia Profesional</h2>
+
+                    <!-- 1. VASS IT -->
+                    <div class="experience-item">
+                        <div class="job-header">
+                            <span>Analista Programador (Integración Internacional)</span>
+                            <span>Julio 2019 – actualmente</span>
+                        </div>
+                        <div class="company">VASS IT UK - VASS IT SPAIN</div>
+                        <ul>
+                            <li>Integración y despliegue de proyectos críticos para la plataforma de banca corporativa
+                                en <strong>Isban UK</strong>.</li>
+                            <li>Implantación de software y paquetes de actualización en entornos de
+                                <strong>Pre-Producción y Producción</strong>.
+                            </li>
+                            <li>Gestión, análisis y resolución de incidencias en producción; pruebas de integración
+                                utilizando herramientas de ALM.</li>
+                            <li>Documentación técnica de requisitos, gestión de cambios mediante RFCs y entrega formal
+                                de documentación (handover a CSA).</li>
+                            <li>Trabajo diario integrado en células de desarrollo multiculturales <strong>100% en
+                                    inglés</strong>.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 2. EVERIS -->
+                    <div class="experience-item">
+                        <div class="job-header">
+                            <span>Analista Programador</span>
+                            <span>Mayo 2017 – 2019</span>
+                        </div>
+                        <div class="company">EVERIS (NTT DATA) / SECOND WINDOWS</div>
+                        <ul>
+                            <li>Análisis, desarrollo e integración de software financiero utilizando la tecnología
+                                <strong>BankSphere</strong>.
+                            </li>
+                            <li>Modelado lógico de componentes, creación de transacciones (TRX, SQL) y desarrollo de
+                                acciones Java.</li>
+                            <li>Gestión de la configuración y control de versiones a través de herramientas corporativas
+                                del sector bancario.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 3. ISBAN UK PAST -->
+                    <div class="experience-item">
+                        <div class="job-header">
+                            <span>Analista Programador (Integración Internacional)</span>
+                            <span>Julio 2015 – Febrero 2017</span>
+                        </div>
+                        <div class="company">ISBAN UK (Santander Banks - Carlton Park, Leicester)</div>
+                        <ul>
+                            <li>Integración y despliegue de proyectos críticos para la plataforma de banca corporativa
+                                en <strong>Isban UK</strong>.</li>
+                            <li>Implantación de software y paquetes de actualización en entornos de
+                                <strong>Pre-Producción y Producción</strong>.
+                            </li>
+                            <li>Gestión, análisis y resolución de incidencias en producción; pruebas de integración
+                                utilizando herramientas de ALM.</li>
+                            <li>Documentación técnica de requisitos, gestión de cambios mediante RFCs y entrega formal
+                                de documentación (handover a CSA).</li>
+                        </ul>
+                    </div>
+
+                    <!-- 4. INSA -->
+                    <div class="experience-item">
+                        <div class="job-header">
+                            <span>Programador Senior</span>
+                            <span>Enero 2009 – Junio 2015</span>
+                        </div>
+                        <div class="company">INSA (ISBAN / IBM) — Cáceres</div>
+                        <ul>
+                            <li>Desarrollo de módulos bancarios Core integrando arquitecturas orientadas a servicios
+                                financieros.</li>
+                            <li>Construcción, testing y empaquetado de componentes transaccionales complejos en
+                                tecnología <strong>BankSphere</strong>.</li>
+                            <li>Colaboración estrecha en el análisis técnico y diseño del ciclo completo de
+                                aplicaciones.</li>
+                            <li>Programación orientada a objetos en Java, diseño de lógica de negocio y versionado
+                                seguro mediante CVS/Vega.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Sección de Habilidades (la versión completa y buena) -->
+                <section id="habilidades">
+                    <h2>Habilidades Técnicas</h2>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <strong>Especialización Bancaria (Core)</strong>
+                            <span class="badge">BankSphere</span> <span class="badge">Arquitectura Partenón</span> <span
+                                class="badge">Vega Modelar</span> <span class="badge">Ciclo Completo SW</span>
+                        </div>
+                        <div class="skill-category">
+                            <strong>Desarrollo Backend & Datos</strong>
+                            <span class="badge">Java</span> <span class="badge">SQL</span> <span
+                                class="badge">PostgreSQL</span> <span class="badge">MariaDB</span>
+                        </div>
+                        <div class="skill-category">
+                            <strong>Frontend & Diseño Web</strong>
+                            <span class="badge">Angular (v8+)</span> <span class="badge">JavaScript</span> <span
+                                class="badge">HTML5</span> <span class="badge">CSS3</span> <span
+                                class="badge">AJAX</span>
+                        </div>
+                        <div class="skill-category">
+                            <strong>Integración, DevOps & Análisis</strong>
+                            <span class="badge">Despliegues en Producción</span>
+                            <span class="badge">Gestión de RFCs</span>
+                            <span class="badge">CVS</span>
+                            <span class="badge">HP ALM</span> <span class="badge">Métrica V3</span>
+                            <span class="badge">CVS</span> <span class="badge">UML 2.0</span> <span
+                                class="badge">Maquinaria Virtual (RAD)</span> <span class="badge">Poseidon</span> <span
+                                class="badge">Fforges</span>
+                        </div>
+                    </div>
+                </section>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                    <section>
+                        <h2>Educación & Formación</h2>
+                        <ul style="padding-left: 15px;">
+                            <li><strong>Ingeniería Técnica en Informática de Gestión</strong><br>Universidad de
+                                Extremadura (2005 – 2009)</li>
+                            <li><strong>Técnico Superior en Administración y Finanzas</strong><br>I.E.S. Alagón de Coria
+                                (2002 – 2004)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Idiomas & Otros Datos</h2>
+                        <ul style="padding-left: 15px;">
+                            <li><strong>Español:</strong> Nativo</li>
+                            <li><strong>Inglés:</strong> Competencia profesional completa (Trabajando a diario en inglés
+                                con <strong> equipos internacionales desde 2015</strong>).</li>
+                            <li>Perfil altamente colaborativo, con gran mentalidad lógica y capacidad analítica para
+                                mentoría técnica.</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <button onclick="window.print()" class="no-print">Descargar en PDF</button>
+
+                <footer>
+                    <p>© 2026 Lorena Calvo Acosta — Desplegado con GitHub Pages</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- ENGLISH VIEW                               -->
+    <!-- ========================================== -->
+    <div id="cv-en" style="display: none;">
+        <div class="container">
+            <header>
+                <h1>Lorena Calvo Acosta</h1>
+                <div class="subtitle">Software / Functional Analyst | BankSphere & Banking Integration Expert</div>
+                <div class="contact-info">
+                    <span>📍 Cáceres, Spain</span>
+                    <span>📞 (+34) 636 791 836</span>
+                    <span>✉️ <a href="mailto:lcalvoac@gmail.com">lcalvoac@gmail.com</a></span>
+                    <span>🔗 <a href="https://www.linkedin.com/in/lorena-calvo-acosta/"
+                            target="_blank">LinkedIn</a></span>
+                </div>
+            </header>
+
+            <div class="main-content">
+                <section id="profile">
+                    <h2>Professional Profile</h2>
+                    <p style="font-size: 10.5pt; text-align: justify; margin: 0;">
+                        Technical Management Software Engineer with over 15 years of experience in the banking and
+                        financial
+                        sector, working within high-performance international teams since 2015. Highly versatile
+                        professional
+                        proficient across the full software development lifecycle (SDLC): from initial analysis and
+                        modeling
+                        to frontend/backend development and final production deployment. Specialized in Banco
+                        Santander's corporate
+                        architecture (BankSphere and Partenón), featuring solid expertise in Java backend and relational
+                        databases,
+                        combined with adaptive skills in modern frontend technologies.
+                    </p>
+                </section>
+
+                <section id="experience">
+                    <h2>Professional Experience</h2>
+
+                    <!-- 1. VASS IT -->
+                    <div class="experience-item">
+                        <div class="job-header">
+                            <span>Software Analyst (International Integration)</span>
+                            <span>July 2019 – Present</span>
+                        </div>
+                        <div class="company">VASS IT UK - VASS IT SPAIN</div>
+                        <ul>
+                            <li>Integration and deployment of critical projects for the corporate banking platform at
+                                <strong>Isban UK</strong>.
+                            </li>
+                            <li>Software implementation and update package delivery across <strong>Pre-Production and
+                                    Production</strong> environments.</li>
+                            <li>Management, analysis, and resolution of production issues; integration testing using ALM
+                                tools.</li>
+                            <li>Technical requirements documentation, change management via RFCs, and formal
+                                documentation delivery (handover to CSA).</li>
+                            <li>Daily collaboration within multicultural agile development teams conducted <strong>100%
+                                    in English</strong>.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 2. EVERIS -->
+                    <div class="experience-item">
+                        <div class="job-header">
+                            <span>Software Analyst</span>
+                            <span>May 2017 – 2019</span>
+                        </div>
+                        <div class="company">EVERIS (NTT DATA) / SECOND WINDOWS</div>
+                        <ul>
+                            <li>Analysis, development, and integration of financial software utilizing
+                                <strong>BankSphere</strong> technology.
+                            </li>
+                            <li>Logical component modeling, transaction creation (TRX, SQL), and Java action
+                                development.</li>
+                            <li>Configuration management and version control through banking sector corporate tools.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 3. ISBAN UK PAST -->
+                    <div class="experience-item">
+                        <div class="job-header">
+                            <span>Software Analyst (International Integration)</span>
+                            <span>July 2015 – February 2017</span>
+                        </div>
+                        <div class="company">ISBAN UK (Santander Banks - Carlton Park, Leicester)</div>
+                        <ul>
+                            <li>Integration and deployment of critical projects for the corporate banking platform at
+                                <strong>Isban UK</strong>.
+                            </li>
+                            <li>Software implementation and update package delivery across <strong>Pre-Production and
+                                    Production</strong> environments.</li>
+                            <li>Management, analysis, and resolution of production issues; integration testing using ALM
+                                tools.</li>
+                            <li>Technical requirements documentation, change management via RFCs, and formal
+                                documentation delivery (handover to CSA).</li>
+                        </ul>
+                    </div>
+
+                    <!-- 4. INSA -->
+                    <div class="experience-item">
+                        <div class="job-header">
+                            <span>Senior Software Developer</span>
+                            <span>January 2009 – June 2015</span>
+                        </div>
+                        <div class="company">INSA (ISBAN / IBM) — Cáceres</div>
+                        <ul>
+                            <li>Development of Core banking modules integrating financial service-oriented architectures
+                                (SOA).</li>
+                            <li>Construction, testing, and packaging of complex transactional components using
+                                <strong>BankSphere</strong> technology.
+                            </li>
+                            <li>Close collaboration on technical analysis and full lifecycle application design.</li>
+                            <li>Object-oriented programming (OOP) in Java, business logic design, and secure version
+                                control via CVS/Vega.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="skills">
+                    <h2>Technical Skills</h2>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <strong>Core Banking Specialization</strong>
+                            <span class="badge">BankSphere</span> <span class="badge">Partenón Architecture</span> <span
+                                class="badge">Vega Modelar</span> <span class="badge">Full SDLC</span>
+                        </div>
+                        <div class="skill-category">
+                            <strong>Backend Development & Data</strong>
+                            <span class="badge">Java</span> <span class="badge">SQL</span> <span
+                                class="badge">PostgreSQL</span> <span class="badge">MariaDB</span>
+                        </div>
+                        <div class="skill-category">
+                            <strong>Frontend & Web Design</strong>
+                            <span class="badge">Angular (v8+)</span> <span class="badge">JavaScript</span> <span
+                                class="badge">HTML5</span> <span class="badge">CSS3</span> <span
+                                class="badge">AJAX</span>
+                        </div>
+                        <div class="skill-category">
+                            <strong>Integration, DevOps & Analysis</strong>
+                            <span class="badge">Production Deployments</span> <span class="badge">RFC Management</span>
+                            <span class="badge">CVS</span> <span class="badge">HP ALM</span> <span class="badge">Métrica
+                                V3</span> <span class="badge">UML 2.0</span> <span class="badge">Virtual Machines
+                                (RAD)</span> <span class="badge">Poseidon</span> <span class="badge">Fforges</span>
+                        </div>
+                    </div>
+                </section>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                    <section>
+                        <h2>Education & Training</h2>
+                        <ul style="padding-left: 15px;">
+                            <li><strong>B.S. in Computer Science (Management Information Systems)</strong><br>University
+                                of Extremadura (2005 – 2009)</li>
+                            <li><strong>Higher Technical Degree in Administration and Finance</strong><br>I.E.S. Alagón
+                                de Coria (2002 – 2004)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Languages & Key Strengths</h2>
+                        <ul style="padding-left: 15px;">
+                            <li><strong>Spanish:</strong> Native</li>
+                            <li><strong>English:</strong> Full Professional Proficiency (<strong>Working daily in
+                                    English within
+                                    international teams since 2015</strong>).</li>
+                            <li>Highly collaborative profile with a strong logical mindset and analytical capacity for
+                                technical mentoring.</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <button onclick="window.print()" class="no-print">Download PDF</button>
+
+                <footer>
+                    <p>© 2026 Lorena Calvo Acosta — Deployed with GitHub Pages</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
