@@ -10,4 +10,4 @@ Este proyecto contiene el CV profesional en formato web de Lorena Calvo, optimiz
 ## Características
 * **Botón de impresión:** Genera un PDF optimizado mediante CSS `@media print`.
 * **Despliegue automático:** Cualquier cambio en la rama `main` se publica al instante.
-* * **Idiomas:** Español e Ingles.
+* **Idiomas:** Español e Ingles.
